@@ -1,0 +1,21 @@
+# 2주차 강사 검증본 (참고용)
+#
+# ★ 이 파일을 그대로 쓰지 말고, 여러분 환경에서 직접 만드세요.
+#      pip install jupyterlab ipykernel numpy pandas matplotlib humanize
+#      pip freeze > requirements.txt
+#
+# 아래는 pip freeze 의 결과가 어떤 모양인지 보여주기 위한 "직접 설치 패키지" 목록이다.
+# 실제 pip freeze 출력에는 이 6개가 끌고 온 의존 패키지 수십 줄이 함께 나온다.
+# 버전 번호는 설치 시점에 따라 달라지므로 그대로 맞출 필요는 없다.
+#
+# ※ 오늘은 torch 를 설치하지 않는다. PyTorch·CUDA 는 3주차에 한다.
+
+# (강사 환경에서 실제 설치·검증한 버전 — Python 3.13.7 기준)
+jupyterlab==4.6.2
+ipykernel==7.3.0
+numpy==2.5.2
+pandas==3.0.5
+matplotlib==3.11.1
+humanize==4.16.0
+
+# 참고: 위 6개를 설치하면 의존성까지 합쳐 pip freeze 결과는 100줄 내외가 된다.
