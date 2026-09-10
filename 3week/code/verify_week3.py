@@ -21,7 +21,7 @@ from pathlib import Path
 
 WIDTH = 62
 NOTEBOOK = "02_tensor_basics.ipynb"
-MIN_CELLS_WITH_OUTPUT = 8       # 셀 13개 중 최소 8개는 출력이 남아 있어야 한다
+MIN_CELLS_WITH_OUTPUT = 8       # 코드 셀 17개 중 최소 8개는 출력이 남아 있어야 한다
 
 
 # ---------------------------------------------------------------- 도구
@@ -73,14 +73,14 @@ def check_2_torch():
     except ImportError:
         return "FAIL", "torch 가 설치되지 않음", (
             "pip install torch torchvision --index-url "
-            "https://download.pytorch.org/whl/cu124")
+            "https://download.pytorch.org/whl/cu126")
 
     ver = torch.__version__
     if "+cpu" in ver:
         return "FAIL", f"{ver}  <- CPU 빌드", (
             "pip uninstall -y torch torchvision ; "
             "pip install torch torchvision --index-url "
-            "https://download.pytorch.org/whl/cu124")
+            "https://download.pytorch.org/whl/cu126")
     if "+cu" in ver:
         return "PASS", f"{ver}  (CUDA 빌드)", ""
     return "PASS", f"{ver}  (접미사 없음)", ""
