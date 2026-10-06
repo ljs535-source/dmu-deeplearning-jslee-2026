@@ -18,6 +18,8 @@
 
 # ── 3) 예외 : 이것만 추적한다 ─────────────────────────────────
 !/*week/code/**
+#    개편본 폴더({N}week_new)의 code 도 올린다 — "*week" 패턴은 "_new" 로 끝나는 이름에 맞지 않는다
+!/*week_new/code/**
 !/.gitignore
 !/README.md
 
