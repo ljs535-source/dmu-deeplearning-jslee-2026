@@ -61,3 +61,6 @@ desktop.ini
 
 # 빌드 산출물
 *.pdf.tmp
+
+# 배포하지 않는 문서 전체
+temp/  
