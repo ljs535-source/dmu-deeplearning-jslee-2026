@@ -1,6 +1,12 @@
 # 파일: verify_submission.py
 # 2주차 과제 자가 점검 스크립트
 #
+# 사용법 (Git Bash)
+#   1) 작업 폴더로 이동          :  cd "<작업 폴더>"             (예: /c/dl2026)
+#   2) 가상환경 활성화           :  source venv/Scripts/activate
+#   3) 실행                      :  python verify_submission.py
+#   4) 출력 전체를 복사해서 LMS 과제란에 붙여넣는다
+#
 # 사용법 (PowerShell)
 #   1) 작업 폴더로 이동          :  Set-Location "<작업 폴더>"   (예: C:\dl2026)
 #   2) 가상환경 활성화           :  .\venv\Scripts\Activate.ps1
@@ -76,7 +82,8 @@ def check_1_venv():
     """[1] 가상환경 안에서 실행 중인가."""
     ok = sys.prefix != sys.base_prefix
     detail = sys.executable
-    fix = r"가상환경을 활성화한 뒤 다시 실행:  .\venv\Scripts\Activate.ps1"
+    fix = ("가상환경을 활성화한 뒤 다시 실행:  source venv/Scripts/activate\n"
+           r"  (PowerShell 이면 .\venv\Scripts\Activate.ps1)")
     return ok, detail, fix
 
 
