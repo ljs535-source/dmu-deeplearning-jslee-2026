@@ -1,11 +1,16 @@
 # 파일: prepare_mydata.py
 # 9주차 — 본인 이미지 데이터셋 폴더 구조 검증 스크립트
 #
+# 사용법 (Git Bash)
+#   cd "$DL2026_HOME"
+#   source venv/Scripts/activate
+#   python prepare_mydata.py                    # 기본 경로 mydata 를 검사
+#   python prepare_mydata.py "D:/사진/내데이터"  # 다른 경로를 검사
+#
 # 사용법 (PowerShell)
 #   Set-Location $env:DL2026_HOME
 #   .\venv\Scripts\Activate.ps1
-#   python prepare_mydata.py                 # 기본 경로 mydata 를 검사
-#   python prepare_mydata.py D:\사진\내데이터  # 다른 경로를 검사
+#   python prepare_mydata.py
 #
 # 기대하는 구조
 #   mydata/
@@ -148,7 +153,7 @@ def main():
         print(f"\n  '{root}' 폴더를 찾을 수 없습니다.")
         print("  현재 위치 :", Path.cwd())
         print("\n  -> 폴더를 만들거나, 경로를 인자로 주세요:")
-        print("     python prepare_mydata.py D:\\사진\\내데이터")
+        print("     python prepare_mydata.py \"D:/사진/내데이터\"")
         print("  -> 데이터를 못 모아 왔으면 대체 데이터셋 배포본을 받으세요 (감점 없음)")
         return
 
