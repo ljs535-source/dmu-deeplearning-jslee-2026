@@ -1,6 +1,12 @@
 # 파일: verify_week3.py
 # 3주차 과제 자가 점검 스크립트
 #
+# 사용법 (Git Bash)
+#   1) 작업 폴더로 이동          :  cd "$DL2026_HOME"
+#   2) 가상환경 활성화           :  source venv/Scripts/activate
+#   3) 실행                      :  python verify_week3.py
+#   4) 출력 전체를 복사해서 LMS 과제란에 붙여넣는다
+#
 # 사용법 (PowerShell)
 #   1) 작업 폴더로 이동          :  Set-Location $env:DL2026_HOME
 #   2) 가상환경 활성화           :  .\venv\Scripts\Activate.ps1
@@ -63,7 +69,8 @@ def check_1_venv():
     in_venv = sys.prefix != sys.base_prefix
     if not in_venv:
         return "FAIL", "가상환경 밖에서 실행 중", (
-            "Set-Location $env:DL2026_HOME ; .\\venv\\Scripts\\Activate.ps1")
+            "cd \"$DL2026_HOME\" && source venv/Scripts/activate\n"
+            "       (PowerShell 이면 Set-Location $env:DL2026_HOME ; .\\venv\\Scripts\\Activate.ps1)")
     return "PASS", Path(sys.prefix).name + " 활성화됨", ""
 
 

@@ -1,6 +1,11 @@
 # 파일: 01_gpu_check.py
 # 3주차 — PyTorch · GPU 환경 진단 스크립트
 #
+# 사용법 (Git Bash)
+#   1) 작업 폴더로 이동   :  cd "$DL2026_HOME"
+#   2) 가상환경 활성화    :  source venv/Scripts/activate
+#   3) 실행               :  python 01_gpu_check.py
+#
 # 사용법 (PowerShell)
 #   1) 작업 폴더로 이동   :  Set-Location $env:DL2026_HOME
 #   2) 가상환경 활성화    :  .\venv\Scripts\Activate.ps1
@@ -51,8 +56,9 @@ def section_python():
 
     if not in_venv:
         print("      -> venv 가 활성화되지 않았습니다.")
-        print("         Set-Location $env:DL2026_HOME")
-        print("         .\\venv\\Scripts\\Activate.ps1")
+        print("         cd \"$DL2026_HOME\"")
+        print("         source venv/Scripts/activate")
+        print("         (PowerShell 이면 .\\venv\\Scripts\\Activate.ps1)")
     return in_venv
 
 
